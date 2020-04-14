@@ -3150,24 +3150,50 @@ let api = function Binance( options = {} ) {
              * @param {function} callback - callback function
              * @return {string} the websocket endpoint
              */
-            candlesticks: function candlesticks( symbols, interval, callback ) {
-                let reconnect = () => {
-                    if ( Binance.options.reconnect ) candlesticks( symbols, interval, callback );
+            candlesticks: function candlesticks(symbols, intervals, callback) {
+                let reconnect = function () {
+                    if (Binance.options.reconnect) candlesticks(symbols, intervals, callback);
                 };
 
                 /* If an array of symbols are sent we use a combined stream connection rather.
-                 This is transparent to the developer, and results in a single socket connection.
-                 This essentially eliminates "unexpected response" errors when subscribing to a lot of data. */
+                   This is transparent to the developer, and results in a single socket connection.
+                   This essentially eliminates "unexpected response" errors when subscribing to a lot of data. */
                 let subscription;
-                if ( Array.isArray( symbols ) ) {
-                    if ( !isArrayUnique( symbols ) ) throw Error( 'candlesticks: "symbols" cannot contain duplicate elements.' );
-                    let streams = symbols.map( function ( symbol ) {
-                        return symbol.toLowerCase() + '@kline_' + interval;
-                    } );
-                    subscription = subscribeCombined( streams, callback, reconnect );
+                if (Array.isArray(symbols)) {
+                    if (!isArrayUnique(symbols)) throw Error('candlesticks: "symbols" cannot contain duplicate elements.');
+                    let list_request = [];
+                    let streams = symbols.map((symbol) => {
+                        if (Array.isArray(intervals)){
+                            if (!isArrayUnique(intervals)) throw Error('candlesticks: "interval" cannot contain duplicate elements.');
+                            
+                            intervals.map((interval) => {
+                                list_request.push(symbol.toLowerCase() + '@kline_' + interval);
+                            });
+                        }   
+                        else 
+                            return symbol.toLowerCase() + '@kline_' + intervals;
+                    });
+
+                    if(list_request.length)
+                        streams = list_request;
+
+                    //console.debug(streams);
+
+                    subscription = subscribeCombined(streams, callback, reconnect);
                 } else {
                     let symbol = symbols.toLowerCase();
-                    subscription = subscribe( symbol + '@kline_' + interval, callback, reconnect );
+
+                    if (Array.isArray(intervals)) {
+                        if (!isArrayUnique(intervals)) throw Error('candlesticks: "interval" cannot contain duplicate elements.');
+                        
+                        let streams = intervals.map((interval) => {
+                            return symbol.toLowerCase() + '@kline_' + interval;
+                        });
+
+                        subscription = subscribeCombined(streams, callback, reconnect);
+                    }
+                    else
+                        subscription = subscribe(symbol + '@kline_' + intervals, callback, reconnect);
                 }
                 return subscription.endpoint;
             },
