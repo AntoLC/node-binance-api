@@ -1,6 +1,21 @@
-[![Downloads](https://img.shields.io/npm/dm/node-binance-api.svg?labelColor=blueviolet)](https://npm-stat.com/charts.html?package=node-binance-api&from=2017-07-01&to=2020-06-01) [![GitHub last commit](https://img.shields.io/github/last-commit/jaggedsoft/node-binance-api.svg?maxAge=2400)](#) [![Latest Version](https://img.shields.io/github/release/jaggedsoft/node-binance-api.svg?style=flat-square)](https://github.com/jaggedsoft/node-binance-api/releases) [![jaggedsoft on Twitter](https://img.shields.io/twitter/follow/jaggedsoft.svg?style=social)](https://twitter.com/jaggedsoft) <!-- [![npm downloads](https://img.shields.io/npm/dt/node-binance-api.svg?maxAge=7200)](https://www.npmjs.com/package/node-binance-api) [![Build Status](https://travis-ci.org/jaggedsoft/node-binance-api.svg?branch=master&style=flat-square)](https://travis-ci.org/jaggedsoft/node-binance-api) [![Coverage Status](https://coveralls.io/repos/github/jaggedsoft/node-binance-api/badge.svg?branch=master&style=flat-square)](https://coveralls.io/github/jaggedsoft/node-binance-api) [![CodeCov](https://codecov.io/gh/jaggedsoft/node-binance-api/branch/master/graph/badge.svg?style=flat-square)](https://codecov.io/github/jaggedsoft/node-binance-api/) [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/996757cec66542c0a64fca2b4cf8a936)](https://www.codacy.com/app/jaggedsoft/node-binance-api?utm_source=github.com&utm_medium=referral&utm_content=jaggedsoft/node-binance-api&utm_campaign=Badge_Coverage) [![Codacy Grade](https://api.codacy.com/project/badge/Grade/996757cec66542c0a64fca2b4cf8a936)](https://www.codacy.com/app/jaggedsoft/node-binance-api) -->
+[![Binance Community API](https://cdn.discordapp.com/attachments/569865969120575519/718166995354255370/binance-api-black.png)](https://dev.binance.vision/)
+[![Yearly Downloads](https://badgen.net/npm/dy/node-binance-api?labelColor=29B6F6&color=3D5AFE&scale=2&label=Downloads&icon=bitcoin-lightning&cache=2400)](https://npm-stat.com/charts.html?package=node-binance-api&from=2017-07-01&to=2020-07-01) ![Last Commit](https://badgen.net/github/last-commit/jaggedsoft/node-binance-api?scale=2&label=🟣%20Updated&labelColor=black&color=448AFF&cache=9999)
+<!-- [![npm downloads](https://img.shields.io/npm/dt/node-binance-api.svg?maxAge=7200)](https://www.npmjs.com/package/node-binance-api) [![Build Status](https://travis-ci.org/jaggedsoft/node-binance-api.svg?branch=master&style=flat-square)](https://travis-ci.org/jaggedsoft/node-binance-api) [![Coverage Status](https://coveralls.io/repos/github/jaggedsoft/node-binance-api/badge.svg?branch=master&style=flat-square)](https://coveralls.io/github/jaggedsoft/node-binance-api) [![CodeCov](https://codecov.io/gh/jaggedsoft/node-binance-api/branch/master/graph/badge.svg?style=flat-square)](https://codecov.io/github/jaggedsoft/node-binance-api/) [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/996757cec66542c0a64fca2b4cf8a936)](https://www.codacy.com/app/jaggedsoft/node-binance-api?utm_source=github.com&utm_medium=referral&utm_content=jaggedsoft/node-binance-api&utm_campaign=Badge_Coverage) [![Codacy Grade](https://api.codacy.com/project/badge/Grade/996757cec66542c0a64fca2b4cf8a936)](https://www.codacy.com/app/jaggedsoft/node-binance-api) https://img.shields.io/npm/dm/node-binance-api.svg?labelColor=blueviolet)
+https://badgen.net/npm/dm/node-binance-api?labelColor=7C4DFF&color=green&scale=2&label=Downloads&icon=bitcoin
+🟣 Used by 727 https://badgen.net/github/dependents-repo/jaggedsoft/node-binance-api?labelColor=blue&color=purple&label=Used%20by&icon=github
+🧪 Releases 87 https://badgen.net/github/releases/jaggedsoft/node-binance-api?scale=2&icon=github&labelColor=purple&color=green&label=%F0%9F%A7%AA%20Release
+🎈💡 Merged PRs 79 https://badgen.net/github/merged-prs/jaggedsoft/node-binance-api
+⭐ Stars 630 https://badgen.net/github/stars/jaggedsoft/node-binance-api?scale=2&label=%E2%AD%90Stars&labelColor=black&color=purple
+✅ship Commits 568 https://badgen.net/github/commits/micromatch/micromatch?label=%E2%9C%A8Commits&labelColor=black&color=red
+⚡ Updated about 16 hours ago https://badgen.net/github/last-commit/jaggedsoft/node-binance-api?scale=2&icon=bitcoin-lightning&label=Updated&labelColor=black&color=448AFF
+👀👁 Watchers 48 https://badgen.net/github/watchers/jaggedsoft/node-binance-api
+color=blueviolet 🔵
+-->
+[![Latest Version](https://img.shields.io/github/release/jaggedsoft/node-binance-api.svg?style=flat-square&labelColor=blueviolet&label=release)](https://github.com/jaggedsoft/node-binance-api/releases) [![GitHub last commit](https://img.shields.io/github/last-commit/jaggedsoft/node-binance-api.svg?maxAge=2400&labelColor=333&label=🟣%20updated)](#) [![Monthly Downloads](https://img.shields.io/npm/dm/node-binance-api.svg?labelColor=29B6F6&color=3D5AFE&label=downloads&logo=bitcoin-lightning)](https://npm-stat.com/charts.html?package=node-binance-api&from=2017-07-01&to=2020-07-01) 
+[![jaggedsoft on Twitter](https://img.shields.io/twitter/follow/jaggedsoft.svg?style=social)](https://twitter.com/jaggedsoft)
 
 [![NPM](https://nodei.co/npm/node-binance-api.png?compact=true)](https://npmjs.org/package/node-binance-api)
+
 # Node Binance API
 This project is designed to help you make your own projects that interact with the [Binance API](https://github.com/binance-exchange/binance-official-api-docs). You can stream candlestick chart data, market depth, or use other advanced features such as setting stop losses and iceberg orders. This project seeks to have complete API coverage including WebSockets.
 
@@ -17,7 +32,6 @@ This project is designed to help you make your own projects that interact with t
   <a href="https://t.me/binance_api_english">Support</a>
 </p></b>
 
-
 #### Installation: **`npm install -s node-binance-api`**
 [![npm install node-binance-api](https://nodei.co/npm/node-binance-api.png?mini=true)](https://npmjs.org/package/node-binance-api)
 
@@ -31,6 +45,51 @@ const binance = new Binance().options({
 ```
 
 # Binance Futures API
+
+#### Futures Prices
+```js
+console.info( await binance.futuresPrices() );
+```
+
+#### Futures Account Balances & Positions
+```js
+console.info( await binance.futuresAccount() );
+```
+
+#### Futures Balances
+```js
+console.info( await binance.futuresBalance() );
+```
+
+#### Futures Limit Buy
+```js
+console.info( await binance.futuresBuy( 'BTCUSDT', 0.1, 8222 ) );
+```
+
+#### Futures Limit Sell
+```js
+console.info( await binance.futuresSell( 'BTCUSDT', 0.5, 11111 ) );
+```
+
+#### Futures Market Buy
+```js
+console.info( await binance.futuresMarketBuy( 'BNBUSDT', 5 ) );
+```
+
+#### Futures Market Sell
+```js
+console.info( await binance.futuresMarketSell( 'TRXUSDT', 1 ) );
+```
+#### Futures Market Orders: Get the fill price using newOrderRespType
+```js
+console.info( await binance.futuresMarketBuy( 'BNBUSDT', amount, { newOrderRespType: 'RESULT' } ) );
+```
+
+#### Futures reduceOnly Order Example
+```js
+if ( side == 'LONG' ) order = await binance.futuresMarketSell( obj.symbol, amount, {reduceOnly: true} )
+else order = await binance.futuresMarketBuy( obj.symbol, amount, {reduceOnly: true} )
+```
 
 #### Get Futures Positions
 ```js
@@ -50,42 +109,6 @@ for ( let market of markets ) {
 ```
 </details>
 
-#### Futures Account Balances & Positions
-```js
-console.info( await binance.futuresAccount() );
-```
-
-#### Futures Balances
-```js
-console.info( await binance.futuresBalance() );
-```
-
-#### Futures Market Buy
-```js
-console.info( await binance.futuresMarketBuy( 'BNBUSDT', 5 ) );
-```
-
-#### Futures Market Sell
-```js
-console.info( await binance.futuresMarketSell( 'TRXUSDT', 1 ) );
-```
-
-#### Futures Limit Buy
-```js
-console.info( await binance.futuresBuy( 'BTCUSDT', 0.1, 8222 ) );
-```
-
-#### Futures Limit Sell
-```js
-console.info( await binance.futuresSell( 'BTCUSDT', 0.5, 11111 ) );
-```
-
-#### Futures reduceOnly Order Example
-```js
-if ( side == 'LONG' ) order = await binance.futuresMarketSell( obj.symbol, amount, {reduceOnly: true} )
-else order = await binance.futuresMarketBuy( obj.symbol, amount, {reduceOnly: true} )
-```
-
 #### Adjust Leverage (1-125x)
 ```js
 console.info( await binance.futuresLeverage( 'ETHUSDT', 50 ) );
@@ -100,11 +123,6 @@ console.info( await binance.futuresMarginType( 'BTCUSDT', 'ISOLATED' ) );
 ```js
 // Type: 1: Add postion margin，2: Reduce postion margin
 console.info( await binance.futuresPositionMargin( "TRXUSDT", amount, type ) );
-```
-
-#### Futures Prices
-```js
-console.info( await binance.futuresPrices() );
 ```
 
 ```js
@@ -127,6 +145,7 @@ console.info( await binance.futuresLeverageBracket( "LINKUSDT" ) );
 console.info( await binance.futuresIncome() );
 console.info( await binance.futuresCancelAll( "BTCUSDT" ) );
 console.info( await binance.futuresCancel( "BTCUSDT", {orderId: "1025137386"} ) );
+console.info( await binance.futuresCountdownCancelAll( "BTCUSDT", 45000 ) );
 console.info( await binance.futuresOrderStatus( "BTCUSDT", {orderId: "1025137386"} ) );
 console.info( await binance.futuresOpenOrders() );
 console.info( await binance.futuresOpenOrders( "BTCUSDT" ) );
@@ -202,6 +221,52 @@ binance.futuresTerminate( 'btcusdt@kline_4h' );
 #### Return active sockets and subscriptions
 ```js
 console.log( binance.futuresSubscriptions() );
+```
+
+# Delivery API (Futures w/Expiration Date)
+```
+deliveryBuy
+deliverySell
+deliveryMarketBuy
+deliveryMarketSell
+deliveryPrices
+deliveryDaily
+deliveryOpenInterest
+deliveryExchangeInfo
+deliveryOpenOrders
+deliveryAllOrders
+deliveryCandles
+deliveryIndexKlines
+deliveryContinuousKlines
+deliveryMarkPriceKlines
+deliveryMarkPrice
+deliveryHistoricalTrades
+deliveryTrades
+deliveryAggTrades
+deliveryUserTrades
+deliveryLiquidationOrders
+deliveryPositionRisk
+deliveryLeverage
+deliveryMarginType
+deliveryPositionMargin
+deliveryPositionMarginHistory
+deliveryIncome
+deliveryBalance
+deliveryAccount
+deliveryDepth
+deliveryQuote
+deliveryLeverageBracket
+deliveryOrderStatus
+deliveryCancel
+deliveryCancelAll
+deliveryCountdownCancelAll
+deliveryOrder
+deliveryGetDataStream
+deliveryCloseDataStream
+deliveryKeepDataStream
+deliveryPing
+deliveryTime
+deliveryOrder
 ```
 
 # Binance API (Spot Trading)
@@ -1936,19 +2001,96 @@ You can enable verbose mode to help with debugging WebSocket streams:
 binance.setOption( 'verbose', true );
 ```
 
-> ### For support go to [Telegram](https://t.me/binance_api_english)
+> ### For support go to [Telegram](https://t.me/binance_api_english) or [Binance Developers](https://dev.binance.vision/)
+---
+
+<a href="https://allcontributors.org"><img src="https://raw.githubusercontent.com/all-contributors/all-contributors/master/docs/assets/logo-full.svg" alt="✨ All Contributors ✨" width="800px" /></a> ✨
+<!-- Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)): -->
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+  <td align="center"><a href="https://liquidity.ltd/"><img src="https://avatars3.githubusercontent.com/u/4283360?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Jon Eyrick</b></sub></a><br /><a href="#question-jaggedsoft" title="Answering Questions">💬</a><!-- <a href="https://github.com/jaggedsoft/node-binance-api/pulls?q=is%3Apr+reviewed-by%3Ajaggedsoft" title="Reviewed Pull Requests">👀</a>--> <a href="#maintenance-jaggedsoft" title="Maintenance">🚧</a> <a href="https://github.com/jaggedsoft/node-binance-api/commits?author=jaggedsoft" title="Code">💻</a></td>
+    <td align="center"><a href="https://www.fio.ie/"><img src="https://avatars1.githubusercontent.com/u/15192260?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Dave</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=dmzoneill" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/bmino"><img src="https://avatars3.githubusercontent.com/u/10902767?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Brandon</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=bmino" title="Code">💻</a></td>
+    <td align="center"><a href="https://ie.linkedin.com/in/dmitrizaitsev"><img src="https://avatars2.githubusercontent.com/u/2513193?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Dmitri Zaitsev</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=dmitriz" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/keith1024"><img src="https://avatars2.githubusercontent.com/u/4868093?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Keith Kirton</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=keith1024" title="Code">💻</a></td>
+    <td align="center"><a href="https://source.ac/"><img src="https://avatars1.githubusercontent.com/u/32546052?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Bunny Eluvade</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=Eluvade" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/itnok"><img src="https://avatars2.githubusercontent.com/u/1726185?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Simone Conti</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=itnok" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/GusGold"><img src="https://avatars3.githubusercontent.com/u/2942675?v=4?s=60" width="60px;" alt=""/><br /><sub><b>GusGold</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=GusGold" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/gunar"><img src="https://avatars2.githubusercontent.com/u/7684574?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Gunar Gessner</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=gunar" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/kirosc"><img src="https://avatars1.githubusercontent.com/u/15169595?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Kiros</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=kirosc" title="Code">💻</a></td>
+    <td align="center"><a href="https://juliensergent.com/"><img src="https://avatars2.githubusercontent.com/u/6815295?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Julien Sergent</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=MadDeveloper" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/nimanr"><img src="https://avatars3.githubusercontent.com/u/5919190?v=4?s=60" width="60px;" alt=""/><br /><sub><b>nimanr</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=nimanr" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/robaleman"><img src="https://avatars3.githubusercontent.com/u/11480600?v=4?s=60" width="60px;" alt=""/><br /><sub><b>rob</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=robaleman" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/gemmell"><img src="https://avatars3.githubusercontent.com/u/3324817?v=4?s=60" width="60px;" alt=""/><br /><sub><b>gemmell</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=gemmell" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/lht147"><img src="https://avatars3.githubusercontent.com/u/5062654?v=4?s=60" width="60px;" alt=""/><br /><sub><b>lht147</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=lht147" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/abou7mied"><img src="https://avatars1.githubusercontent.com/u/3378281?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Ahmed Sabry</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=abou7mied" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/arenddeboer"><img src="https://avatars2.githubusercontent.com/u/7022204?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Arend de Boer</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=arenddeboer" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/ejfrancis"><img src="https://avatars1.githubusercontent.com/u/3171352?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Evan Francis</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=ejfrancis" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/charlesdarkwind"><img src="https://avatars0.githubusercontent.com/u/23563500?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Jasmin Parent</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=charlesdarkwind" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/joaquinnunez"><img src="https://avatars3.githubusercontent.com/u/436746?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Joaquín Núñez</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=joaquinnunez" title="Code">💻</a></td>
+    <td align="center"><a href="https://www.flamy.dev/"><img src="https://avatars0.githubusercontent.com/u/7620533?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Meet Mangukiya</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=meetmangukiya" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/afsharsafavi"><img src="https://avatars3.githubusercontent.com/u/14315351?v=4?s=60" width="60px;" alt=""/><br /><sub><b>afsharsafavi</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=afsharsafavi" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/boyhagemann"><img src="https://avatars1.githubusercontent.com/u/737610?v=4?s=60" width="60px;" alt=""/><br /><sub><b>boyhagemann</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=boyhagemann" title="Code">💻</a></td>
+    <td align="center"><a href="http://iapploft.net/"><img src="https://avatars0.githubusercontent.com/u/555195?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Dave</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=davewang" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/dbvcode"><img src="https://avatars2.githubusercontent.com/u/19186078?v=4?s=60" width="60px;" alt=""/><br /><sub><b>dbvcode</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=dbvcode" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/sethyx"><img src="https://avatars1.githubusercontent.com/u/1311824?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Gergely Szell</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=sethyx" title="Code">💻</a></td>
+    <td align="center"><a href="https://andersonaguiar.com/"><img src="https://avatars1.githubusercontent.com/u/491544?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Anderson Aguiar</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=andersonaguiar" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/hoota"><img src="https://avatars3.githubusercontent.com/u/438983?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Andrey</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=hoota" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://balthazar.dev/"><img src="https://avatars1.githubusercontent.com/u/6033345?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Balthazar Gronon</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=balthazar" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/ifmad"><img src="https://avatars3.githubusercontent.com/u/3315749?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Can Madran</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=ifmad" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/CollinEstes"><img src="https://avatars3.githubusercontent.com/u/1966803?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Collin Estes</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=CollinEstes" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/dpereskokov"><img src="https://avatars1.githubusercontent.com/u/16366057?v=4?s=60" width="60px;" alt=""/><br /><sub><b>dpereskokov</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=dpereskokov" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Dobberoonski75"><img src="https://avatars2.githubusercontent.com/u/9811447?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Shad Dobberoonski</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=Dobberoonski75" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/guygberg"><img src="https://avatars2.githubusercontent.com/u/40508367?v=4?s=60" width="60px;" alt=""/><br /><sub><b>guygberg</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=guygberg" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/joelrich"><img src="https://avatars3.githubusercontent.com/u/4216919?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Joel Richard</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=joelrich" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://cxjs.io/"><img src="https://avatars2.githubusercontent.com/u/433394?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Marko Stijak</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=mstijak" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/matthewwoop"><img src="https://avatars0.githubusercontent.com/u/11703376?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Matthew Woop</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=matthewwoop" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/bhnow"><img src="https://avatars0.githubusercontent.com/u/15703708?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Miika</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=bhnow" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Rolaus"><img src="https://avatars2.githubusercontent.com/u/12387674?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Rolaus</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=Rolaus" title="Code">💻</a></td>
+    <td align="center"><a href="http://sergeypotekhin.com/?utm_source=github&utm_medium=profile-link&utm_campaign=social-networks"><img src="https://avatars2.githubusercontent.com/u/5871170?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Sergey Potekhin</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=pavlovdog" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/toant13"><img src="https://avatars2.githubusercontent.com/u/2158827?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Tony Tran</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=toant13" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Fuzzyma"><img src="https://avatars3.githubusercontent.com/u/3540542?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Ulrich-Matthias Schäfer</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=Fuzzyma" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/bitoiu"><img src="https://avatars0.githubusercontent.com/u/1192590?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Vitor Monteiro</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=bitoiu" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/WWWSpider"><img src="https://avatars2.githubusercontent.com/u/6440092?v=4?s=60" width="60px;" alt=""/><br /><sub><b>WWWSpider</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=WWWSpider" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/dreyescat"><img src="https://avatars2.githubusercontent.com/u/1313415?v=4?s=60" width="60px;" alt=""/><br /><sub><b>dreyescat</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=dreyescat" title="Code">💻</a></td>
+    <td align="center"><a href="http://hems.io/"><img src="https://avatars3.githubusercontent.com/u/27327?v=4?s=60" width="60px;" alt=""/><br /><sub><b>hems.io</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=hems" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/mathlet0x"><img src="https://avatars1.githubusercontent.com/u/1147652?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Mathieu</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=mathlet0x" title="Code">💻</a></td>
+    <td align="center"><a href="http://nurdtechie98.github.io/"><img src="https://avatars0.githubusercontent.com/u/21201278?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Chirag Shetty</b></sub></a><br /><a href="https://github.com/jaggedsoft/node-binance-api/commits?author=nurdtechie98" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+<!-- [![All Contributors](https://img.shields.io/badge/all_contributors-48-orange.svg?style=flat-square)](#contributors-) -->
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+<i><small>This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome</small></i>
+
+***Thank you to all contributors!*** dmzoneill, bmino, dmitriz, keith1024, Eluvade, itnok, GusGold, gunar, kirosc, MadDeveloper, nimanr, robaleman, gemmell, lht147, abou7mied, arenddeboer, ejfrancis, charlesdarkwind, joaquinnunez, meetmangukiya, afsharsafavi, boyhagemann, davewang, dbvcode, sethyx, andersonaguiar, hoota, balthazar, ifmad, CollinEstes, dpereskokov, Dobberoonski75, guygberg, joelrich, mstijak, matthewwoop, bhnow, Rolaus, pavlovdog, toant13, Fuzzyma, bitoiu, WWWSpider, dreyescat, hems, mathlet0x, nurdtechie98 and others!
 
 ## Contribution
 - Give us a star :star:
 - Fork and Clone! Awesome
 - Select existing [issues](https://github.com/jaggedsoft/node-binance-api/issues) or create a [new issue](https://github.com/jaggedsoft/node-binance-api/issues/new) and give us a PR with your bugfix or improvement after. We love it ❤️
 
-***Special thanks to our most frequent or significant contributors:*** bmino, dmzoneill, dmitriz, keith1024
-
-***Thank you to all contributors:*** joelrich, Xodetaetl, PaulMuller, JasonMcz, kirosc, abou7mied, jmacioszek, DoobieD, Eluvade, dbvcode, pavlovdog, usama33, yanislk, learnathoner, vaielab, nickreese, Tuitio, grandmore, itnok, CollinEstes, sethyx, mstijak, MadDeveloper, balthazar, bitoiu, matthewwoop, robaleman, hems and others!
-
 ![Downloads](https://img.shields.io/npm/dt/node-binance-api.svg?style=for-the-badge&maxAge=86400) ![Stars](https://img.shields.io/github/stars/jaggedsoft/node-binance-api.svg?style=for-the-badge&label=Stars) ![Contributors](https://img.shields.io/github/contributors/jaggedsoft/node-binance-api.svg?style=for-the-badge&maxAge=86400)
 [![Stargazers over time](https://starcharts.herokuapp.com/jaggedsoft/node-binance-api.svg)](https://starcharts.herokuapp.com/jaggedsoft/node-binance-api)
-
 [![Views](http://hits.dwyl.io/jaggedsoft/node-binance-api.svg)](http://hits.dwyl.io/jaggedsoft/node-binance-api)
 [![jaggedsoft on Twitter](https://img.shields.io/twitter/follow/jaggedsoft.svg?style=social)](https://twitter.com/jaggedsoft)
