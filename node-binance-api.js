@@ -420,6 +420,7 @@ let api = function Binance( options = {} ) {
         if ( typeof flags.newOrderRespType !== 'undefined' ) opt.newOrderRespType = flags.newOrderRespType;
         if ( typeof flags.newClientOrderId !== 'undefined' ) opt.newClientOrderId = flags.newClientOrderId;
         if ( typeof flags.sideEffectType !== 'undefined' ) opt.sideEffectType = flags.sideEffectType;
+        if ( typeof flags.isIsolated !== 'undefined' ) opt.isIsolated = flags.isIsolated;
 
         /*
          * STOP_LOSS
@@ -4479,11 +4480,86 @@ let api = function Binance( options = {} ) {
          * @param {function} callback - the callback function
          * @return {undefined}
          */
-        mgBorrow: function ( asset, amount, callback ) {
-            let parameters = Object.assign( { asset: asset, amount: amount } );
+        mgBorrow: function ( asset, amount, isIsolated, symbol, callback ) {
+            isIsolated = (isIsolated) ? "TRUE" : "FALSE" ;
+            let parameters = Object.assign( { asset, amount, isIsolated, symbol } );
             signedRequest( sapi + 'v1/margin/loan', parameters, function ( error, data ) {
                 if ( callback ) return callback( error, data );
             }, 'POST' );
+        },
+
+        /**
+         * Create Isolated Margin Account
+         * @param {string} base - the asset
+         * @param {number} quote - the asset
+         * @param {function} callback - the callback function
+         * @return {undefined}
+         */
+         mgIsolatedCreate: function ( base, quote, callback ) {
+            let parameters = Object.assign( { base, quote } );
+            signedRequest( sapi + 'v1/margin/isolated/create', parameters, function ( error, data ) {
+                if ( callback ) return callback( error, data );
+            }, 'POST' );
+        },
+
+        /**
+         * Isolated Margin Account Transfer
+         * @param {string} asset - such as BTC
+         * @param {string} symbol
+         * @param {string} transFrom - "SPOT", "ISOLATED_MARGIN"
+         * @param {string} transTo - "SPOT", "ISOLATED_MARGIN"
+         * @param {DECIMAL} amount
+         * @param {function} callback - the callback function
+         * @return {undefined}
+         */
+         mgIsolatedTransfer: function ( asset, symbol, transFrom, transTo, amount, callback ) {
+            let parameters = Object.assign( { asset, symbol, transFrom, transTo, amount } );
+            signedRequest( sapi + 'v1/margin/isolated/transfer', parameters, function ( error, data ) {
+                if ( callback ) return callback( error, data );
+            }, 'POST' );
+        },
+
+        /**
+         * Margin account borrow/loan
+         * @param {string} asset - the asset
+         * @param {number} amount - the asset
+         * @param {function} callback - the callback function
+         * @return {undefined}
+         */
+        mgGetBorrow: function ( asset, startTime, callback ) {
+            let parameters = Object.assign( { asset: asset, startTime: startTime } );
+            signedRequest( sapi + 'v1/margin/loan', parameters, function ( error, data ) {
+                if ( callback ) return callback( error, data );
+            }, 'GET' );
+        },
+
+        /**
+         * Query Margin Asset
+         * @param {string} asset - the asset
+         * @param {function} callback - the callback function
+         * @return {undefined}
+         */
+         mgAsset: function ( asset,  callback ) {
+            //const typeMargin = isIsolated ? "isolated/" : "";
+            let parameters = Object.assign( { asset } );
+            signedRequest( sapi + 'v1/margin/asset', parameters, function ( error, data ) {
+                if ( callback ) return callback( error, data );
+            }, 'GET' );
+        },
+
+        /**
+         * Margin account AccountDetail
+         * @param {string} asset - the asset
+         * @param {number} amount - the asset
+         * @param {function} callback - the callback function
+         * @return {undefined}
+         */
+         mgAccountDetail: function ( timestamp, isIsolated, symbols, callback ) {
+            const typeMargin = isIsolated ? "isolated/" : "";
+            let parameters = Object.assign( { timestamp, symbols } );
+            signedRequest( sapi + 'v1/margin/'+typeMargin+'account', parameters, function ( error, data ) {
+                if ( callback ) return callback( error, data );
+            }, 'GET' );
         },
 
         /**
@@ -4499,6 +4575,22 @@ let api = function Binance( options = {} ) {
                 if ( callback ) return callback( error, data );
             }, 'POST' );
         },
+
+        /**
+         * Margin Cross AllPairs
+         * Get all the pairs available for Margin
+         * @param {boolean} isIsolated - cross or isolated
+         * @param {function} callback - the callback function
+         * @return {undefined}
+         */
+         mgPair: function(symbol, isIsolated, callback ) {
+            const typeMargin = isIsolated ? "isolated/" : "";
+            let parameters = Object.assign( { symbol } );
+            signedRequest( sapi + 'v1/margin/'+typeMargin+'pair', parameters, function( error, data ) {
+                if( callback ) return callback( error, data );
+            } );
+        },
+        
         /**
          * Margin account details
          * @param {function} callback - the callback function
@@ -4509,14 +4601,29 @@ let api = function Binance( options = {} ) {
                 if( callback ) return callback( error, data );
             } );
         },
+
+        /**
+         * Margin Cross AllPairs
+         * Get all the pairs available for Margin
+         * @param {boolean} isIsolated - cross or isolated
+         * @param {function} callback - the callback function
+         * @return {undefined}
+         */
+         mgAllPairs: function(isIsolated, callback ) {
+            const typeMargin = isIsolated ? "isolated/" : "";
+            signedRequest( sapi + 'v1/margin/'+typeMargin+'allPairs', {}, function( error, data ) {
+                if( callback ) return callback( error, data );
+            } );
+        },
+
         /**
          * Get maximum borrow amount of an asset
          * @param {string} asset - the asset
          * @param {function} callback - the callback function
          * @return {undefined}
          */
-        maxBorrowable: function ( asset, callback ) {
-            signedRequest( sapi + 'v1/margin/maxBorrowable', { asset: asset }, function( error, data ) {
+         maxBorrowable: function ( asset, isolatedSymbol, callback ) {
+            signedRequest( sapi + 'v1/margin/maxBorrowable', { asset, isolatedSymbol }, function( error, data ) {
                 if( callback ) return callback( error, data );
             } );
         },
