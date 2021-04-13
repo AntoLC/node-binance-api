@@ -446,7 +446,6 @@ let api = function Binance( options = {} ) {
         if ( typeof flags.newOrderRespType !== 'undefined' ) opt.newOrderRespType = flags.newOrderRespType;
         if ( typeof flags.newClientOrderId !== 'undefined' ) opt.newClientOrderId = flags.newClientOrderId;
         if ( typeof flags.sideEffectType !== 'undefined' ) opt.sideEffectType = flags.sideEffectType;
-        if ( typeof flags.isIsolated !== 'undefined' ) opt.isIsolated = flags.isIsolated;
 
         /*
          * STOP_LOSS
