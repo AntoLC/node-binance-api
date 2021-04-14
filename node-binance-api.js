@@ -5584,19 +5584,21 @@ let api = function Binance( options = {} ) {
                     // Prepare depth cache context
                     let context = Binance.depthCacheContext[symbol];
                     context.snapshotUpdateId = json.lastUpdateId;
-                    context.messageQueue = context.messageQueue.filter( depth => depth.u > context.snapshotUpdateId );
-                    // Process any pending depth messages
-                    for ( let depth of context.messageQueue ) {
-                        /* Although sync errors shouldn't ever happen here, we catch and swallow them anyway
-                         just in case. The stream handler function above will deal with broken caches. */
-                        try {
-                            depthHandler( depth );
-                        } catch ( err ) {
-                            // Do nothing
+                    if(context && context.messageQueue){
+                        context.messageQueue = context.messageQueue.filter( depth => depth.u > context.snapshotUpdateId );
+                        // Process any pending depth messages
+                        for ( let depth of context.messageQueue ) {
+                            /* Although sync errors shouldn't ever happen here, we catch and swallow them anyway
+                            just in case. The stream handler function above will deal with broken caches. */
+                            try {
+                                depthHandler( depth );
+                            } catch ( err ) {
+                                // Do nothing
+                            }
                         }
+                        delete context.messageQueue;
+                        if ( callback ) callback( symbol, Binance.depthCache[symbol] );
                     }
-                    delete context.messageQueue;
-                    if ( callback ) callback( symbol, Binance.depthCache[symbol] );
                 };
 
                 /* If an array of symbols are sent we use a combined stream connection rather.
