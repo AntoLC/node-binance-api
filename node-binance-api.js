@@ -68,6 +68,7 @@ let api = function Binance( options = {} ) {
         hedgeMode: false,
         localAddress: false,
         family: false,
+        depthCachefrequency: "100",
         log: function ( ...args ) {
             console.log( Array.prototype.slice.call( args ) );
         }
@@ -5609,7 +5610,7 @@ let api = function Binance( options = {} ) {
                     if ( !isArrayUnique( symbols ) ) throw Error( 'depthCache: "symbols" cannot contain duplicate elements.' );
                     symbols.forEach( symbolDepthInit );
                     let streams = symbols.map( function ( symbol ) {
-                        return symbol.toLowerCase() + `@depth@100ms`;
+                        return symbol.toLowerCase() + "@depth@"+Binance.options.depthCachefrequency+"ms";
                     } );
                     subscription = subscribeCombined( streams, handleDepthStreamData, reconnect, function () {
                         async.mapLimit( symbols, 50, getSymbolDepthSnapshot, ( err, results ) => {
@@ -5621,7 +5622,7 @@ let api = function Binance( options = {} ) {
                 } else {
                     let symbol = symbols;
                     symbolDepthInit( symbol );
-                    subscription = subscribe( symbol.toLowerCase() + `@depth@100ms`, handleDepthStreamData, reconnect, function () {
+                    subscription = subscribe( symbol.toLowerCase() + "@depth@"+Binance.options.depthCachefrequency+"ms", handleDepthStreamData, reconnect, function () {
                         async.mapLimit( [ symbol ], 1, getSymbolDepthSnapshot, ( err, results ) => {
                             if ( err ) throw err;
                             results.forEach( updateSymbolDepthCache );
