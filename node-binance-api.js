@@ -5841,6 +5841,22 @@ let api = function Binance( options = {} ) {
             },
 
             /**
+             * Websocket candle sticks
+             * @param {string[]} streams
+             * @param {function} callback - callback function
+             * @return {string} the websocket endpoint
+             */
+             candlesticksIntervals: function candlesticksIntervals(streams, callback) {
+                let reconnect = function () {
+                    if (Binance.options.reconnect) candlesticksIntervals(streams, callback);
+                };
+
+                let subscription = subscribeCombined(streams, callback, reconnect);
+                
+                return subscription.endpoint;
+            },
+
+            /**
              * Websocket mini ticker
              * @param {function} callback - callback function
              * @return {string} the websocket endpoint
