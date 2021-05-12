@@ -5337,15 +5337,28 @@ let api = function Binance( options = {} ) {
              * @param {function} list_status_callback - status callback
              * @return {undefined}
              */
-            userMarginData: function userMarginData( callback, execution_callback = false, subscribed_callback = false, list_status_callback = false ) {
+            userMarginData: function userMarginData( callback, execution_callback = false, subscribed_callback = false, list_status_callback = false, isIsolated = false, symbol = "" ) {
                 let reconnect = () => {
-                    if ( Binance.options.reconnect ) userMarginData( callback, execution_callback, subscribed_callback );
+                    if ( Binance.options.reconnect ) userMarginData( callback, execution_callback, subscribed_callback, list_status_callback, isIsolated, symbol);
                 };
-                apiRequest( sapi + 'v1/userDataStream', {}, function ( error, response ) {
+
+                const isolatedEndpoint = isIsolated ? "/isolated" : "";
+                const param = isIsolated && symbol ? {symbol} : {};
+
+                apiRequest( sapi + 'v1/userDataStream'+isolatedEndpoint, param, function ( error, response ) {
                     Binance.options.listenMarginKey = response.listenKey;
+                    
+                    if(error){
+                        // console.debug("userDataStreamError", {
+                        //     symbol,
+                        //     error:error.body
+                        // });
+                        return;
+                    }
+
                     setTimeout( function userDataKeepAlive() { // keepalive
                         try {
-                            apiRequest( sapi + 'v1/userDataStream?listenKey=' + Binance.options.listenMarginKey, {}, function ( err ) {
+                            apiRequest( sapi + 'v1/userDataStream'+isolatedEndpoint+'?listenKey=' + Binance.options.listenMarginKey, param, function ( err ) {
                                 if ( err ) setTimeout( userDataKeepAlive, 60000 ); // retry in 1 minute
                                 else setTimeout( userDataKeepAlive, 60 * 30 * 1000 ); // 30 minute keepalive
                             }, 'PUT' );
